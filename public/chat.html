@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <main>
+        <aside>
+            <div class="roomName"></div>
+            <ul></ul>
+        </aside>
+        <div class="chat__content">
+            <div class="head">
+                Chat Room
+            </div>
+            <div class="chat__container">
+                <div  class="chatRoom">
+                </div>
+                <div class="input__area">
+                    <form>
+                        <input type="text" placeholder="Message" name="message" required autocomplete="off">
+                        <button>Send</button>
+                    </form>
+                    <button class="send-location btn">Send Location</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="socket.io/socket.io.js"></script>
+    <script src="/js/moment.js"></script>
+    <script src="/js/qs.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+
+
+:root, body
+{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+body
+{
+    display: grid;
+    grid-template-columns: auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+main
+{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: minmax(auto, 320px) 1fr;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+aside
+{
+    background-color: #2C3E50 ;
+    box-sizing: border-box;
+    display: grid;
+    padding: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 50px;
+    align-content: start;
+    text-transform: capitalize;
+    overflow: hidden;
+}
+
+aside ul
+{
+    display: grid;
+    grid-template-columns: auto;
+    align-items: start;
+    align-content: start;
+    list-style: none;
+    overflow-y: auto;
+}
+aside ul li
+{
+    position: relative;
+}
+aside ul li::before
+{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/check.png');
+    background-position: center;
+    background-size: 20px;
+    border-radius: 50%;
+    left: -30px;
+    top: 15px;
+    z-index: 99;
+}
+
+.chat__content
+{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 12% 88%;
+    overflow: hidden;
+}
+.head
+{
+    background-color: #273746;
+    font-size: 32px;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    padding-left: 30px;
+
+}
+.chat__container
+{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr auto;
+    width: 100%;
+    height: 100%;
+    align-self: stretch !important ;
+    overflow: hidden;
+}
+
+.chatRoom
+{
+    width: 100%;
+    height: 100%;
+    /* background-color: #283747; */
+    /* background-color: #273746; */
+    background-color: #34495E;
+    padding-left: 30px;
+    box-sizing: border-box;
+    color: white;
+    font-weight: 600;
+    overflow: auto;
+}
+.input__area
+{
+    background-color: #34495E;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 10px 30px;
+    column-gap: 10px;
+}
+.input__area form
+{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 10px;
+}
+.input__area form input, .input__area button
+{
+    outline: none;
+    padding: 15px;
+    background-color: transparent;
+    border: 2px solid #EAECEE;
+    border-radius: 5px;
+    color: #EAECEE;
+    font-weight: 700;
+    transition: 300ms;
+    cursor: pointer;
+}
+.input__area form input
+{
+    cursor: text;
+}
+.input__area button:hover, .input__area button:focus
+{
+    background-color: #17202A;
+    color: #EAECEE;
+    border-color: #2E86C1;
+}
+.input__area form input:focus
+{
+    padding-left: 60px;
+}
+.input__area button:disabled
+{
+    border-color: #F5B7B1;
+    color: #F5B7B1;
+    cursor: default;
+}
+.input__area button:disabled:hover
+{
+    background-color: transparent;
+}
+
+input::placeholder
+{
+    color: #5485b6;
+}
+.time
+{
+    color: rgb(199, 199, 199);
+    font-size: 12px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.perMessage
+{
+    display: grid;
+    grid-template-columns: auto;
+    align-items: start;
+    align-content: start;
+    margin: 20px 0;
+}
+.perMessage p
+{
+    margin: 4px 0;
+}
+.perMessage a
+{
+    color: rgb(108, 145, 255);
+    display: inline-block;
+}
+
+.join-container
+{
+    background-color: #1B2631;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.join-container form
+{
+    color: white;
+    display: grid;
+    grid-template-columns: auto;
+    background-color: #212F3C;
+    border-radius: 25px;
+    padding: 25px 30px;
+    box-sizing: border-box;
+    width: 360px;
+}
+.join-container form h1
+{
+    text-align: center;
+}
+
+.form-group
+{
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+.form-group button, 
+.form-group input
+{
+    padding: 12px;
+    background-color: transparent;
+    border: 2px inset #21618C;
+    /* color: #21618C; */
+    color: white;
+    outline: none;
+    font-weight: 600;
+}
+.form-group button
+{
+    border: 2px outset #21618C;
+}
+.form-group button:active
+{
+    border: 2px inset #21618C;
+}
+.form-group label
+{
+    font-weight: 600;
+}
+.form-group input::placeholder
+{
+    color: rgb(141, 141, 141);
+}
+
+.roomName 
+{
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 1px solid #21618C;
+}
